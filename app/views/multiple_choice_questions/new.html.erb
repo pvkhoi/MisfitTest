@@ -1,0 +1,37 @@
+<%= content_for :cssname do %>
+<%= stylesheet_link_tag "new_multiple_choice_question", :media => "all" %>
+<% end %>
+
+<%= content_for :jsname do %>
+<%= javascript_include_tag 'new_multiple_choice_question', 'data-turbolinks-track' => true %>
+<% end %>
+
+<h1>Add new multiple choice question</h1>
+<%= link_to 'Back to list of questions', multiple_choice_questions_path %>
+<%= form_for :multiple_choice_question, url: multiple_choice_questions_path, method: "post" do |f| %>
+	<div id="question">
+		<h3>Question</h3>
+		<textarea name="multiple_choice_question[question]"></textarea>
+	</div>
+
+	<div id="answers">
+		<div class="answer">
+			<h3>Answer A</h3>
+			<textarea name="multiple_choice_question[answers][]"></textarea>
+		</div>
+	</div>
+
+	<div id="add_answer">
+		<button>Add another answer</button>
+	</div>	
+
+	<div id="selectbox_answer">
+		<h3>Right Answer</h3>
+		<select name="multiple_choice_question[right_answer]">
+			<option value="0">A</option>
+		</select>
+	</div>
+	<div class="clearfix">
+		<%= f.submit "Add question", class: "button" %>
+	</div>
+<% end %>

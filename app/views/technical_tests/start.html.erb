@@ -1,0 +1,14 @@
+<%= content_for :jsname do %>
+<%= javascript_include_tag 'start_technical_test', 'data-turbolinks-track' => true %>
+<% end %>
+
+<br/>
+<br/>
+<p>Hello <%= @technical_test.username %>. This is Misfit's candidate testing site.</p>
+<p>You will now have <%= @technical_test.duration %> hours to finish your test.</p>
+<p>As soon as you are ready, please click the button below to start the testing round.</p>
+
+<%= form_for :technical_test, :html => {id: 'start_form'}, url: update_start_time_technical_test_path(@technical_test), method: :put do |f| %>
+	<input id="start_time" name="start_time" type="hidden" value=""/>
+	<button class="button">START</button>
+<% end %>

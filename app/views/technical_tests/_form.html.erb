@@ -1,0 +1,55 @@
+<%= form_for @technical_test, :url => {:action => @technical_test.new_record? ? :create : :update} do |f| %>
+  <% if @technical_test.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@technical_test.errors.count, "error") %> prohibited this technical_test from being saved:</h2>
+
+      <ul>
+      <% @technical_test.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="technical_test_num_of_mcqs">Number of multiples choice questions</label>
+    <div class="controls">
+      <input class="text_field" id="technical_test_num_mcq" name="technical_test[num_of_mcqs]" type="number">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Username</label>
+    <div class="controls">
+      <input class="text_field" name="technical_test[username]" type="text">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Email</label>
+    <div class="controls">
+      <input class="text_field" name="technical_test[email]" type="text">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Duration (in hours)</label>
+    <div class="controls">
+      <input class="text_field" name="technical_test[duration]" type="text">
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'button' %>
+    <%= link_to t('.cancel', :default => "Cancel"),
+                technical_tests_path, :class => 'button' %>
+  </div>
+
+<% end %>

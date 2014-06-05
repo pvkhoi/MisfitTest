@@ -1,0 +1,30 @@
+<h1>Listing technical_tests</h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number of questions</th>
+      <th>Link to share</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @technical_tests.each do |technical_test| %>
+      <tr>
+        <td><%= technical_test.name %></td>
+      
+        <td><%= technical_test.candidate_questions.to_a.count %></td>
+        <td> <%= technical_test_url(technical_test) %> </td>
+        <td>
+          <%= link_to 'Report', report_technical_test_path(technical_test) %> 
+          <%= link_to 'Destroy', technical_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Technical test', new_technical_test_path %>

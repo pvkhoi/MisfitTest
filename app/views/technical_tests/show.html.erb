@@ -1,0 +1,75 @@
+<%= content_for :jsname do %>
+<%= javascript_include_tag 'show_technical_test', 'data-turbolinks-track' => true %>
+<% end %>
+
+<br />
+<br />
+<h5 id="time_remaining">Time remaining: </h5>
+<%= form_for :technical_test, :html => {id: 'answer_form'}, url: technical_test_path(:id => @technical_test.id, :question => (@question_index.to_i)), method: :put do |f| %>
+	<input id="selected_answer" name="selected_answer" type="hidden" value=""/>
+	<input id="button_clicked" name="button_clicked" type="hidden" value=""/>
+	<div class="panel radius callout">
+		<h3><%= 'Question ' + @question_index.to_s %></h3>
+		<p><%= my_render @question.question %></p>
+	</div>
+
+	<div class="panel radius">
+		<% @question.answers.each_with_index do |answer , index| %>
+			<%= answer_radio_button(@candidate_question.answer, answer, index) %>
+			<label for="radio<%= index %>"> <%= answer %> </label>
+			<br/>
+		<% end %>
+	</div>
+
+	<div id='previous_answer' class="inline-block">
+		<%= previous_next_button %>
+	</div>
+
+	<div id='next_answer' class="inline-block">
+		<%= test_next_button %>
+	</div>
+
+	<div id='finish_test' class="block">
+		<button class="button alert">Finish</button>
+	</div>
+<% end %>
+
+<%= form_for :technical_test, :html => {id: 'finish_form'}, url: update_finish_technical_test_path(:id => @technical_test.id, :question => @question_index), method: :patch do |f| %>
+	<input id="last_selected_answer" name="last_selected_answer" type="hidden" value=""/>
+<% end %>
+
+
+<script type="text/javascript">
+var idInterval;
+//var time_remaining = 10;
+var time_remaining = <%= test_time_remaining.to_i %>;
+function updateTime() {
+	var hour_remaining = parseInt(time_remaining / 3600);
+	var minute_remaining = parseInt((time_remaining % 3600) / 60);
+	var second_remaining = time_remaining % 60;
+	document.getElementById("time_remaining").innerHTML = "Time remaining: "
+	+ hour_remaining.toString() + ":" + minute_remaining.toString() + ":" + second_remaining.toString();
+	time_remaining -= 1;
+
+	if (time_remaining == -1)
+	{
+		var radios = document.getElementsByName('selected_answer');
+		for (var i = 0, length = radios.length; i < length; i++)
+			if (radios[i].checked) {
+				var x = document.getElementById('last_selected_answer');
+				x.value = radios[i].value;
+				break;
+			}
+		document.getElementById('finish_form').submit();
+	}
+} 
+
+$(document).ready(function() {	
+	updateTime();
+	clearInterval(idInterval);
+	idInterval = setInterval( "updateTime()", 1000);
+
+});
+
+
+</script>

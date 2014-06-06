@@ -34,7 +34,7 @@
 	</div>
 <% end %>
 
-<%= form_for :technical_test, :html => {id: 'finish_form'}, url: update_finish_technical_test_path(:id => @technical_test.id, :question => @question_index), method: :patch do |f| %>
+<%= form_for :technical_test, :html => {id: 'finish_form'}, url: update_finish_technical_test_path(:id => @technical_test.id, :question => @question_index), method: :put do |f| %>
 	<input id="last_selected_answer" name="last_selected_answer" type="hidden" value=""/>
 <% end %>
 

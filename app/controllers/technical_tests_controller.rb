@@ -116,7 +116,6 @@ class TechnicalTestsController < ApplicationController
     if params.has_key?(:question)
       @technical_test.update_answer( params[:question].to_i , params[:last_selected_answer] )
     end
-
     @technical_test.set_finish
     @result = @technical_test.calculate_result
     UserMailer.send_result_email("Interview Subject" , @technical_test.name , @technical_test.name , @result ).deliver  

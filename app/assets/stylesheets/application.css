@@ -8,26 +8,36 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+
+ *= require font-awesome
  *= require scaffold
  *= require foundation_and_overrides
  *= require_self
  */
+
+ .black_bg {
+ 	background-color: #252525;
+ }
+
+ .white_bg {
+ 	background-color: #ffffff;
+ }
 
 .row_full_width {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: initial;
-	background-color: #ffffff;
 }
 
 .row .row {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 80em;
+	max-width: 100em;
 }
 
 #misfit_description {
+	padding-top: 12px;
 	background-color: #ffffff;
 	color: #4c4c4c;
 }
@@ -35,7 +45,50 @@
 #misfit_description .row {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 80em;
+	max-width: 100em;
+}
+
+#misfit_description .row p {
+	font-size: 12px;
+}
+
+.light_font {
+	font-weight: lighter;
+}
+
+#misfit_subscribe {
+	color: #f6f6f6;
+	font-weight: lighter;
+}
+
+#misfit_subscribe > .row {
+	height: auto;
+}
+
+#misfit_subscribe .columns .row:first-child {
+	padding-top: 24px;
+}
+
+#misfit_subscribe .columns .row {
+	padding-bottom: 24px;
+	font-size: 20px;
+}
+
+#misfit_subscribe button.postfix {
+	border-width: 0px;
+	background: #333333;
+	color: white;
+}
+
+#misfit_subscribe .email_icon {
+	position: absolute;
+	left: 12px;
+	top: 8px;
+	color: #4c4c4c;
+}
+
+#misfit_subscribe input[type="text"] {
+	padding-left: 40px;
 }
 
 body {

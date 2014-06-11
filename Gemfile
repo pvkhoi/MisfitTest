@@ -47,3 +47,5 @@ gem 'coderay'
 
 # To use debugger
 gem 'debugger'
+
+gem 'font-awesome-rails'

@@ -13,9 +13,15 @@
   </head>
 
   <body>
-    <div class="row row_full_width">
+    <div class="row row_full_width white_bg">
     <div class="row">
     <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+         <h1><a href="#">Misfit Test</a></h1>
+       </li>
+       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
       <section class="top-bar-section">
         <ul class="left">
           <li class="has-dropdown">
@@ -34,7 +40,7 @@
           <li><a href="#"><%= image_tag("misfit_logo.jpg", :size => '30x30') %></a></li>
         </ul>
         <ul class="right">
-        <li><a href="<%= destroy_user_session_path %>" data-method="delete" rel="nofollow"><span class="label alert">LOG OUT</span></a></li>
+            <li><a href="<%= destroy_user_session_path %>" data-method="delete" rel="nofollow"><span class="label alert">LOG OUT</span></a></li>
             <li><a href="<%= multiple_choice_questions_path %>">QUESTIONS</a></li>
             <li><a href="<%= technical_tests_path %>">TESTS</a></li>
         </ul>
@@ -43,14 +49,43 @@
     </div>
     </div>
 
+    <div class="row row_full_width white_bg">
     <div class="row">
       <div class="large-12 columns">
         <%= yield %>
       </div>
     </div>
+    </div>
 
     <div id="footer">
-      <div class="row row_full_width">
+      <div id="misfit_subscribe">
+        <div class="row row_full_width black_bg">
+          <div class="row">
+            <div class="small-6 columns">
+              <div class="row">
+                WHAT WILL WE DO <strong>NEXT?</strong>
+              </div>
+              <div class="row">
+                Be the first to get updates and new offers.
+              </div>
+            </div>
+            <div class="small-6 columns">
+                <form>
+                <div class="row collapse">
+                  <div class="large-9 columns">
+                    <i class="fa fa-envelope email_icon"></i>
+                    <input type="text" placeholder="Your Email Address">
+                  </div>
+                  <div class="large-3 columns">
+                    <button class="postfix">SUBSCRIBE</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row_full_width white_bg">
         <div class="row"> 
           <nav class="top-bar" data-topbar>
            <section class="top-bar-section">
@@ -74,7 +109,12 @@
         </div>
       </div>
       <div id="misfit_description">
-        <div class="row">asdasd
+        <div class="row">
+          <div class="small-12 columns">
+            <p><strong>Misfit Wearables</strong><span class="light_font"> 839 Mitten Road, Suite 100, Burlingame, CA 94010</span><br/>
+            <span class="light_font">&copy; Copyright Misfit Wearables. All Rights Reserved. Terms of Use | Privacy Policy<br/>Apple, the Apple logo, iPhone and iPod touch are trademarks of Apple Inc.,<br/>registered in the U.S and other countries. App Store is a service mark of Apple Inc.</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>

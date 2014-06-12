@@ -20,7 +20,7 @@
         <li class="name">
          <h1><a href="#">Misfit Test</a></h1>
        </li>
-       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+       <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
       </ul>
       <section class="top-bar-section">
         <ul class="left">
@@ -35,8 +35,15 @@
           <li><a href="#">REVIEWS</a></li>
           <li><a href="#">STORE</a></li>
           <li><a href="#">SUPPORT</a></li>
+          <li class="show-for-small-only"><a href="#">INFOGRAPHICS</a></li>
+          <li class="show-for-small-only"><a href="#">MISFITOPIA</a></li>
+          <li class="show-for-small-only"><a href="#">ABOUT</a></li>
+          <li class="show-for-small-only"><a href="#">TEAM</a></li>
+          <li class="show-for-small-only"><a href="#">MEDIA</a></li>
+          <li class="show-for-small-only"><a href="#">JOBS</a></li>
+          <li class="show-for-small-only"><a href="#">CONTACT</a></li>
         </ul>
-        <ul class="center">
+        <ul class="center show-for-medium-up">
           <li><a href="#"><%= image_tag("misfit_logo.jpg", :size => '30x30') %></a></li>
         </ul>
         <ul class="right">
@@ -49,7 +56,7 @@
     </div>
     </div>
 
-    <div class="row row_full_width white_bg">
+    <div id="body" class="row row_full_width white_bg">
     <div class="row">
       <div class="large-12 columns">
         <%= yield %>
@@ -70,26 +77,31 @@
               </div>
             </div>
             <div class="small-6 columns">
+              <div class="row">
                 <form>
-                <div class="row collapse">
-                  <div class="large-9 columns">
-                    <i class="fa fa-envelope email_icon"></i>
-                    <input type="text" placeholder="Your Email Address">
+                  <div class="row collapse">
+                    <div class="large-9 columns">
+                      <i class="fa fa-envelope email_icon"></i>
+                      <input type="text" placeholder="Your Email Address">
+                    </div>
+                    <div class="large-3 columns">
+                      <button class="postfix">SUBSCRIBE</button>
+                    </div>
                   </div>
-                  <div class="large-3 columns">
-                    <button class="postfix">SUBSCRIBE</button>
-                  </div>
+                </form>
+              </div>
+              <div class="row term_row">
+                <div class="large-12 columns">
+                  <span class="term_textblock">By entering your e-mail address you accept the terms and conditions</span>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row row_full_width white_bg">
-        <div class="row"> 
-          <nav class="top-bar" data-topbar>
-           <section class="top-bar-section">
-            <ul class="left">
+      <div id="bottom_bar" class="white_bg">
+        <div class="row row_full_width">
+            <ul class="show-for-medium-up">
               <li><a href="#">INFOGRAPHICS</a></li>
               <li><a href="#">MISFITOPIA</a></li>
               <li><a href="#">ABOUT</a></li>
@@ -97,6 +109,35 @@
               <li><a href="#">MEDIA</a></li>
               <li><a href="#">JOBS</a></li>
               <li><a href="#">CONTACT</a></li>
+              
+            </ul>
+            <ul>
+              <li><a href="#"><%= image_tag("fb.png", :size => '8x8') %></a></li>
+              <li><a href="#"><%= image_tag("twitter.png", :size => '18x18') %></a></li>
+              <li><a href="#"><%= image_tag("pinterest.png", :size => '18x18') %></a></li>
+              <li><a href="#"><%= image_tag("google.png", :size => '18x18') %></a></li>
+            </ul>
+        </div>
+      </div> 
+      <div class="row row_full_width white_bg">
+        
+          <!--
+          <nav class="top-bar" data-topbar>
+           <ul class="title-area">
+            <li class="name">
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+           </ul>
+          <section 
+           <section class="top-bar-section">
+            <ul class="left">
+              <li class="show-for-medium-up"><a href="#">INFOGRAPHICS</a></li>
+              <li class="show-for-medium-up"><a href="#">MISFITOPIA</a></li>
+              <li class="show-for-medium-up"><a href="#">ABOUT</a></li>
+              <li class="show-for-medium-up"><a href="#">TEAM</a></li>
+              <li class="show-for-medium-up"><a href="#">MEDIA</a></li>
+              <li class="show-for-medium-up"><a href="#">JOBS</a></li>
+              <li class="show-for-medium-up"><a href="#">CONTACT</a></li>
             </ul>
             <ul class="right">
               <li><a href="#"><%= image_tag("fb.png", :size => '8x8') %></a></li>
@@ -107,7 +148,7 @@
            </section>
           </nav>
         </div>
-      </div>
+      </div>-->
       <div id="misfit_description">
         <div class="row">
           <div class="small-12 columns">

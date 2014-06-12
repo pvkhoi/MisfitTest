@@ -15,6 +15,10 @@
  *= require_self
  */
 
+ .toggle-topbar span {
+ 	color: #4c4c4c;
+ }
+
  .black_bg {
  	background-color: #252525;
  }
@@ -56,6 +60,10 @@
 	font-weight: lighter;
 }
 
+#body {
+	padding-bottom: 36px;	
+}
+
 #misfit_subscribe {
 	color: #f6f6f6;
 	font-weight: lighter;
@@ -70,7 +78,7 @@
 }
 
 #misfit_subscribe .columns .row {
-	padding-bottom: 24px;
+	padding-bottom: 0px;
 	font-size: 20px;
 }
 
@@ -89,6 +97,42 @@
 
 #misfit_subscribe input[type="text"] {
 	padding-left: 40px;
+}
+
+.term_textblock {
+	font-size: 12px;
+}
+
+.term_row {
+	padding-bottom: 24px !important;
+}
+
+#bottom_bar {
+	padding-top: 24px;
+}
+
+#bottom_bar ul:first-child {
+	float: left;
+}
+
+#bottom_bar ul:not(:first-child) {
+	float: right;
+	margin-right: 24px;
+}
+
+#bottom_bar ul li {
+	font-size: 12px;
+	display: inline;
+}
+
+#bottom_bar ul li:not(:first-child) {
+	margin-left: 36px;
+}
+
+#bottm_bar ul li a:link, #bottom_bar ul li a:visited,
+	#bottom_bar ul li a:active, #bottom_bar ul li a:hover {
+	text-decoration: none;
+	color: #4c4c4c;
 }
 
 body {

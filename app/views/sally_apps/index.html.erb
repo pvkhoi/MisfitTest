@@ -2,53 +2,167 @@
 <%= stylesheet_link_tag "sally_app/index_sally_app", :media => "all" %>
 <% end %>
 
-<div class="header-section">
-	<div class="row">
-		<div class="medium-6 columns">
-			<div class="row padding-top-72">
-				<div class="medium-2 medium-offset-2 columns">
-					<%= image_tag("/assets/sally_app/1920/logo.png") %>
+<div class="varela-round-font letter-spacing-05">
+	<div class="header-section">
+		<div class="row">
+			<div class="medium-6 columns">
+				<div class="row padding-top-72">
+					<div class="medium-2 medium-offset-2 columns">
+						<%= image_tag("/assets/sally_app/1920/logo.png") %>
+					</div>
+					<div class="medium-2 columns padding-top-24 end">
+						<%= image_tag("/assets/sally_app/1920/tabs.png") %>
+					</div>
 				</div>
-				<div class="medium-2 columns padding-top-24 end">
-					<%= image_tag("/assets/sally_app/1920/tabs.png") %>
+				<div class="row padding-top-84">
+					<div class="medium-5 medium-offset-2 columns">
+						<span class="white-text font-size-60">Sally App</span>
+					</div>
+				</div>
+				<div class="row padding-top-48">
+					<div class="medium-7 medium-offset-2 columns
+						white-text">
+						<p>
+							What our app is good for is making your life easier.
+							<br/>
+							How does it work? That's exactly what we want to
+							<br/>
+							tell you about. Stay with us and the answer will
+							<br/>
+							reveal itself, it will be absolutely cool.
+						</p>
+					</div>
+				</div>
+				<div class="row padding-top-48 padding-bot-48">
+					<div class="medium-4 medium-offset-2 columns">
+						<a href="#" class="button large radius button-transparent">LEARN MORE</a>
+					</div>
 				</div>
 			</div>
-			<div class="row padding-top-84">
-				<div class="medium-5 medium-offset-2 columns">
-					<span class="white-text varela-round-font font-size-60">Sally App</span>
-				</div>
-			</div>
-			<div class="row padding-top-48">
-				<div class="medium-7 medium-offset-2 columns
-					white-text varela-round-font letter-spacing-05">
-					<p>
-						What our app is good for is making your life easier.
-						<br/>
-						How does it work? That's exactly what we want to
-						<br/>
-						tell you about. Stay with us and the answer will
-						<br/>
-						reveal itself, it will be absolutely cool.
-					</p>
-				</div>
-			</div>
-			<div class="row padding-top-48 padding-bot-48">
-				<div class="medium-4 medium-offset-2 columns">
-					<a href="#" class="button large radius button-transparent
-						varela-round-font">LEARN MORE</a>
+
+			<div class="medium-6 columns">
+				<div class="row padding-top-96">
+					<div class="medium-5 medium-offset-2 columns">
+						<%= image_tag("/assets/sally_app/1920/iPhone.png") %>
+					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="medium-6 columns">
-			<div class="row padding-top-96">
-				<div class="medium-5 medium-offset-3 columns">
-					<%= image_tag("/assets/sally_app/1920/iPhone.png") %>
-				</div>
-			</div>
+		<div class="row navigation-bar">
+			<ul>
+				<li><a href="#">
+					<%= image_tag("/assets/sally_app/1920/logo_nav_bar.png") %>
+				</a></li>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">SERVICES</a></li>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">TEAM</a></li>
+				<li><a href="#">WORK</a></li>
+				<li><a href="#">FEATURES</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li><a href="#">SHORTCODES</a></li>
+			</ul>
 		</div>
 	</div>
-	<div class="row navigation-bar">
+
+	<div class="features-section">
+		<div class="left-feature-section">
+			<%= image_tag("/assets/sally_app/1920/customization_features.png") %>
+			<p class="features-section-title">CUSTOMIZATION</p>
+			<p class="features-section-text">
+				We really believe that apps and websites should not only<br/>
+				be eye catching but an actually provide a really great user<br/>
+				experience that users will be actually provide and<br/>
+				remember.
+			</p>
+		</div>
+		<div class="center-feature-section">
+			<%= image_tag("/assets/sally_app/1920/service_features.png") %>
+			<p class="features-section-title">CUSTOMER SERVICE</p>
+			<p class="features-section-text">
+				Rest easy knowing real people are ready to help you 24<br/>
+				hours a day. Everyone on our award-winning Customer<br/>
+				Care team is an experienced Squarespace user.<br/>
+				Be cool, be with us today, brother.
+			</p>
+		</div>
+		<div class="right-feature-section">
+			<%= image_tag("/assets/sally_app/1920/analytic_features.png") %>
+			<p class="features-section-title">ANALYTICS</p>
+			<p class="features-section-text">
+				View the traffic and behavior of visitors in real-time. Learn<br/>
+				where they're coming from, and what search keywords<br/>
+				they're using to find you. It's really importants for young<br/>
+				man, don't missing with us.
+			</p>
+		</div>
+	</div>
+
+	<div class="responsive-section">
+		<div>
+			<%= image_tag("/assets/sally_app/1920/fully_responsive.png") %>
+			<span>Fully responsive</span>
+		</div>
+	</div>
+
+	<div class="about-section">
+		<%= image_tag("/assets/sally_app/1920/macbook.png") %>
+		<p class="about-section-title">
+			We really know what you need.
+		</p>
+		<p class="about-section-text">
+			Whether you need simple pages, striking galleries, a professional blog, or an online<br/>
+			store, it's all included with your Squarespace website. Best of all, everything is<br/>
+			mobile ready right from the start with your Squarespace website.
+		</p>
+		<a href="#" class="button large radius about-section-button">TRY RIGHT NOW</a>
+	</div>
+
+	<div class="team-section">
+		<p class="team-section-title">
+			Our awesome team
+		</p>
+		<p class="team-section-text">
+			We believe in a diverse range of personel to bring creative skills, thoughts, and ideas to the table. Be<br/>
+			cool, we awesome, be with us today, really ok?
+		</p>
+		<div class="team-member-section">
+			<div class="team-member-left-section">
+				<%= image_tag("/assets/sally_app/1920/team_1.png") %>
+				<p>
+					<span class="team-section-member-name">
+						Gregory Lapin
+					</span>
+					<br/>
+					<span class="team-section-member-text">
+						CO-FOUNDER
+					</span>
+				</p>
+			</div>
+			<div class="team-member-center-section">
+				<%= image_tag("/assets/sally_app/1920/team_1.png") %>
+				<p>
+					<span class="team-section-member-name">
+						Nick Frost
+					</span>
+					<br/>
+					<span class="team-section-member-text">
+						CEO
+					</span>
+				</p> 
+			</div>
+			<div class="team-member-right-section">
+				<%= image_tag("/assets/sally_app/1920/team_1.png") %>
+				<p>
+					<span class="team-section-member-name">
+						Alex Nevsky
+					</span>
+					<br/>
+					<span class="team-section-member-text">
+						CO-FOUNDER
+					</span> 
+				</p>
+			</div>
+		</div>
 	</div>
 </div>
-

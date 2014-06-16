@@ -127,7 +127,7 @@
 	margin-left: 36px;
 }
 
-#bottm_bar ul li a:link, #bottom_bar ul li a:visited,
+#bottom_bar ul li a:link, #bottom_bar ul li a:visited,
 	#bottom_bar ul li a:active, #bottom_bar ul li a:hover {
 	text-decoration: none;
 	color: #4c4c4c;

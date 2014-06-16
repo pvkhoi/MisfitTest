@@ -37,7 +37,6 @@
 .row .row {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 100em;
 }
 
 #misfit_description {
@@ -49,7 +48,6 @@
 #misfit_description .row {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 100em;
 }
 
 #misfit_description .row p {
@@ -135,6 +133,86 @@
 	color: #4c4c4c;
 }
 
+.varela-round-font {
+	font-family: "Varela Round";
+}
+
+.white-text {
+	color: #fff;
+}
+
+.padding-top-24 {
+	padding-top: 24px;
+}
+
+.padding-top-36 {
+	padding-top: 36px;
+}
+
+.padding-top-48 {
+	padding-top: 48px;
+}
+
+.padding-top-60 {
+	padding-top: 60px;
+}
+
+.padding-top-72 {
+	padding-top: 72px;
+}
+
+.padding-top-84 {
+	padding-top: 84px;
+}
+
+.padding-top-96 {
+	padding-top: 96px;
+}
+
+.padding-bot-24 {
+	padding-bottom: 24px;
+}
+
+.padding-bot-36 {
+	padding-bottom: 36px;
+}
+
+.padding-bot-48 {
+	padding-bottom: 48px;
+}
+
+.padding-bot-60 {
+	padding-bottom: 60px;
+}
+
+.padding-bot-72 {
+	padding-bottom: 72px;
+}
+
+.padding-bot-84 {
+	padding-bottom: 84px;
+}
+
+.font-size-24 {
+	font-size: 24px;
+}
+
+.font-size-48 {
+	font-size: 48px;
+}
+
+.font-size-60 {
+	font-size: 60px;
+}
+
+.font-size-72 {
+	font-size: 72px;
+}
+
+.letter-spacing-05 {
+	letter-spacing: 0.5px;
+}
+
 body {
-	background-color: #dedede;
+	-webkit-font-smoothing: antialiased;
 }

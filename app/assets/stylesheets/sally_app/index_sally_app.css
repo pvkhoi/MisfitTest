@@ -1,0 +1,22 @@
+ /*
+ *= require index_sally_app
+*/
+
+.header-section {
+	background-image: url('/assets/sally_app/1920/introduction_background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.button-transparent {
+	border-radius: 6px !important;
+	border-width: 3px;
+	border-color: white;
+	background: none;
+}
+
+.header-section .navigation-bar .top-bar {
+	background-color: #E84B43;
+	height: 100px;
+}
+

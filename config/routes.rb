@@ -1,6 +1,9 @@
 MisfitTest::Application.routes.draw do
 
-  root :to => "multiple_choice_questions#index"
+  match 'sally_app/index' => 'sally_apps#index'
+  root :to => 'sally_apps#index'
+
+  # root :to => "multiple_choice_questions#index"
 
   devise_for :users
   # root :to => 'welcome#index'
